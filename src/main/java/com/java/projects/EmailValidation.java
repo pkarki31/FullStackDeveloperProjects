@@ -7,6 +7,7 @@ public class EmailValidation {
 
     static int sizeArray = 0;
     static String [] arr;
+    static StringBuffer sb = new StringBuffer();
     static String find=null;
 
 
@@ -16,10 +17,15 @@ public class EmailValidation {
 
             if(arr[i].contains(input)){
 
-                return arr[i];
+                sb.append(" "+arr[i]);
             }
 
         }
+
+       if(sb.length()>0){
+           return sb.toString();
+       }
+
 
         return "Not found";
     }
