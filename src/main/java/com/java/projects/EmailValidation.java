@@ -1,6 +1,5 @@
 package com.java.projects;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class EmailValidation {
@@ -45,7 +44,7 @@ public class EmailValidation {
 
         for(int i=0;i<sizeArray;i++){
 
-            System.out.println("Enter email ID of employee : ");
+            System.out.println("Enter "+ (i+1) +" email ID of employee : ");
 
             arr[i]=sc1.nextLine();
 
