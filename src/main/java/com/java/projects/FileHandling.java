@@ -28,6 +28,7 @@ public class FileHandling {
         try {
             File myObj = new File(fileName);
             Scanner myReader = new Scanner(myObj);
+            System.out.println("Reading Data from : "+fileName);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
                 System.out.println(data);
@@ -63,6 +64,7 @@ public class FileHandling {
             BufferedWriter out = new BufferedWriter(
                     new FileWriter(fileName, true));
             out.write(content);
+            System.out.println("After Appending Data .");
             out.close();
         }
         catch (IOException e) {
@@ -75,12 +77,13 @@ public class FileHandling {
 
         String fileName  = "TestFile.txt";
 
-        createFile(fileName);
+     //   createFile(fileName);
 
-        writeDataToFile(fileName,"Writing something in File \n");
+     //   writeDataToFile(fileName,"Writing something in File \n");
 
         readFile(fileName);
-
         appendDataToFile(fileName,"This is newly added line ");
+
+        readFile(fileName);
     }
 }
